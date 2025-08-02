@@ -1,0 +1,228 @@
+/* Container */
+.chat-container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 40px auto;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: rgba(17, 24, 39, 1); /* Dark slate */
+  color: rgba(243, 244, 246, 1); /* Light text */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(55, 65, 81, 1); /* Soft border */
+}
+
+/* Chat Section */
+.chat {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(55, 65, 81, 1);
+}
+
+/* Chat Header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: rgba(31, 41, 55, 1); /* Slightly lighter slate */
+  border-bottom: 1px solid rgba(55, 65, 81, 1);
+}
+
+.chat-header .username {
+  font-weight: 600;
+  color: rgba(243, 244, 246, 1);
+}
+
+.chat-header button {
+  background: rgba(167, 139, 250, 1); /* Accent */
+  border: none;
+  color: rgba(17, 24, 39, 1);
+  padding: 6px 12px;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.chat-header button:hover {
+  filter: brightness(1.1);
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(17, 24, 39, 1);
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(55, 65, 81, 1);
+  border-radius: 3px;
+}
+
+.message {
+  flex-shrink: 0;
+  max-width: 60%;
+  padding: 8px 12px;
+  margin-bottom: 8px; /* replaces gap */
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.message:last-child {
+  margin-bottom: 0;
+}
+
+.message-me {
+  align-self: flex-end;
+  background-color: #4f8cff;
+  color: white;
+  border-bottom-right-radius: 0;
+  text-align: right;
+  animation: bubblePopInRight 0.3s ease forwards;
+}
+
+.message-other {
+  align-self: flex-start;
+  background-color: #e4e4e4;
+  color: black;
+  border-bottom-left-radius: 0;
+  text-align: left;
+  animation: bubblePopInLeft 0.3s ease forwards;
+}
+
+
+.username {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+
+
+/* Chat Footer */
+.chat-footer {
+  display: flex;
+  padding: 12px;
+  background-color: rgba(31, 41, 55, 1);
+  border-top: 1px solid rgba(55, 65, 81, 1);
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(55, 65, 81, 1);
+  outline: none;
+  background-color: rgba(17, 24, 39, 1);
+  color: rgba(243, 244, 246, 1);
+  margin-right: 10px;
+}
+
+.chat-footer input::placeholder {
+  color: rgba(156, 163, 175, 1);
+}
+
+.chat-footer input:focus {
+  border-color: rgba(167, 139, 250, 1);
+}
+
+.chat-footer button {
+  background-color: rgba(167, 139, 250, 1);
+  border: none;
+  color: rgba(17, 24, 39, 1);
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.chat-footer button:hover {
+  filter: brightness(1.1);
+}
+
+/* User List Section */
+.user-list {
+  flex: 1;
+  background-color: rgba(17, 24, 39, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+  border-left: 1px solid rgba(55, 65, 81, 1);
+}
+
+.user-list::-webkit-scrollbar {
+  width: 6px;
+}
+.user-list::-webkit-scrollbar-thumb {
+  background: rgba(55, 65, 81, 1);
+  border-radius: 3px;
+}
+
+.user-list button {
+  display: block; 
+  width: 100%;
+  padding: 0.5rem 0.75rem; 
+  border: none;
+  border-radius: 0.375rem; 
+  background-color: transparent;
+  color: #f3f4f6; 
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.user-list button:hover {
+  background-color: #1f2937; 
+}
+
+@keyframes bubblePopInRight {
+  0% {
+    transform: translateX(20px) scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(-5px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes bubblePopInLeft {
+  0% {
+    transform: translateX(-20px) scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(5px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}

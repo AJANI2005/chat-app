@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "name": "bob",
+      "password": "1234"
+    },
+    {
+      "id": "1",
+      "name": "alice",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "name": "jeff",
+      "password": "1234"
+    }
+  ],
+  "chatRooms": [
+    {
+      "id": "87vIsAiPPCgz3KXGAAAB",
+      "userIds": [
+        "0",
+        "1"
+      ],
+      "messages": [
+        {
+          "id": "40facabe-6a82-4082-82ba-78cb94724c6f",
+          "text": "Hello",
+          "userId": "0"
+        },
+        {
+          "id": "eed15603-e6fa-46cd-bf06-51253c98d6ec",
+          "text": "SS",
+          "userId": "0"
+        },
+        {
+          "id": "72eaab04-f5cd-4c55-9226-56fa60fab210",
+          "text": "SS",
+          "userId": "0"
+        },
+        {
+          "id": "bf07e553-7aab-44c6-9ded-1fd61b1210b0",
+          "text": "SS",
+          "userId": "0"
+        },
+        {
+          "id": "a82cbe4c-50a4-4e6f-83ec-82e27f959279",
+          "text": "SS",
+          "userId": "0"
+        },
+        {
+          "id": "ed786734-9e73-47fa-974b-7e13b5ff3529",
+          "text": "SS",
+          "userId": "0"
+        },
+        {
+          "id": "d9a8ac03-13eb-4355-b21c-bd2c39947701",
+          "text": "SS",
+          "userId": "0"
+        },
+        {
+          "id": "e0aba0ec-befb-48e7-81a8-1e938b88f7ec",
+          "text": "SS",
+          "userId": "0"
+        },
+        {
+          "id": "26febf9a-29fc-4711-825e-faf60fb6dc05",
+          "text": "ss",
+          "userId": "0"
+        },
+        {
+          "id": "1ad39acb-fc1c-4319-886a-83aebdba1690",
+          "text": "ss",
+          "userId": "0"
+        },
+        {
+          "id": "055e5157-3d19-4ead-ae7f-c1c6681b752b",
+          "text": "hello",
+          "userId": "0"
+        },
+        {
+          "id": "c3faad71-b7bb-4cd9-9578-4cb07f920895",
+          "text": "test",
+          "userId": "0"
+        },
+        {
+          "id": "616ecc3b-e36d-44aa-b961-9d6bffdcf7e4",
+          "text": "ggsg",
+          "userId": "0"
+        },
+        {
+          "id": "f6daf67d-9a64-4c78-bf7b-23e68bfdd183",
+          "text": "eee",
+          "userId": "0"
+        },
+        {
+          "id": "1ef7cafc-44c7-47b7-8966-06cee2f8858c",
+          "text": "sdasfaf",
+          "userId": "0"
+        },
+        {
+          "id": "51b03b7c-dc62-4e1b-9d99-4a00b521dccf",
+          "text": "test",
+          "userId": "0"
+        }
+      ]
+    },
+    {
+      "id": "iak7cfzp59qHHxRGAAAB",
+      "userIds": [
+        "2",
+        "1"
+      ],
+      "messages": [
+        {
+          "id": "a3cef67a-5d5e-42c7-8047-1601204c1014",
+          "text": "Hi alice this is jeff",
+          "userId": "2"
+        }
+      ]
+    },
+    {
+      "id": "iak7cfzp59qHHxRGAAAB",
+      "userIds": [
+        "2",
+        "0"
+      ],
+      "messages": []
+    }
+  ]
+}

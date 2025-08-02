@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "name": "bob",
+      "password": "1234"
+    },
+    {
+      "id": "1",
+      "name": "alice",
+      "password": "1234"
+    }
+  ],
+  "chatRooms": [
+    {
+      "id": "87vIsAiPPCgz3KXGAAAB",
+      "userIds": [
+        "0",
+        "1"
+      ],
+      "messages": [
+       
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+/* Container */
+.chat-container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Chat Section */
+.chat {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2a2a2a;
+}
+
+/* Chat Header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #333;
+}
+
+.chat-header .username {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.chat-header button {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chat-header button:hover {
+  background: #ff6666;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+/* Chat Footer */
+.chat-footer {
+  display: flex;
+  padding: 12px;
+  background-color: #2a2a2a;
+  border-top: 1px solid #333;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  background: #333;
+  color: white;
+}
+
+.chat-footer input::placeholder {
+  color: #aaa;
+}
+
+.chat-footer button {
+  background: #4a90e2;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chat-footer button:hover {
+  background: #357ab8;
+}
+
+/* User List Section */
+.user-list {
+  flex: 1;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+  border-left: 1px solid #2a2a2a;
+}
+
+.user-list::-webkit-scrollbar {
+  width: 6px;
+}
+.user-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+.user-list p {
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.user-list p:hover {
+  background-color: #2a2a2a;
+}

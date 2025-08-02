@@ -1,0 +1,6 @@
+{
+  "users": [
+    { "id": "0", "name": "bob1", "password": "1234" }
+  ],
+  "chatRooms": []
+}

@@ -1,0 +1,40 @@
+import express from "express";
+import cors from "cors";
+import { createServer } from "http";
+import { Server } from "socket.io";
+import db from "./db/data.js";
+
+// Create Server and Socket IO Server
+const app = express();
+
+// Middleware
+app.use(cors());
+
+const server = createServer(app);
+
+
+// Routes
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
+
+app.post("/api/login", (req, res) => {
+   const { username, password } = req.body; 
+   res.send({username, password});
+});
+
+// Socket IO
+const io = new Server(server, {
+    cors: {
+        origin: "http://localhost:5173",
+        methods: ["GET", "POST"]
+    }
+});
+
+io.on("connection", (socket) => {
+    console.log("User connected", socket.id);
+});
+
+// Start Server
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
