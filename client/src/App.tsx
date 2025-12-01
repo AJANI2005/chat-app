@@ -80,7 +80,7 @@ function App() {
   };
 
   const onLogout = async () => {
-     setUser(undefined);
+    setUser(undefined);
   }
 
   const joinRoom = (other: User) => {

@@ -12,9 +12,7 @@ const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json()); 
-
-
+app.use(express.json());
 
 // Create HTTP server and Socket.IO server
 const server = createServer(app);
@@ -30,12 +28,14 @@ io.on("connection", (socket) => {
   console.log("User connected", socket.id);
 
   // Join room
-  socket.on("room:join", async ({user,other})=>{
+  socket.on("room:join", async ({ user, other }) => {
     // Check if room exists
     await db.read();
-    const room = db.data.chatRooms.find((r) => r.userIds.includes(user.id) && r.userIds.includes(other.id));
+    const room = db.data.chatRooms.find(
+      (r) => r.userIds.includes(user.id) && r.userIds.includes(other.id),
+    );
 
-    if(!room){
+    if (!room) {
       // Create new room
       const newRoom = {
         id: socket.id,
@@ -48,13 +48,12 @@ io.on("connection", (socket) => {
       // Join new room
       socket.join(newRoom.id);
       socket.emit("room:joined", newRoom);
-    }else{
+    } else {
       // Join existing room
       socket.join(room.id);
       socket.emit("room:joined", room);
     }
-  })
-
+  });
   // Send message
   socket.on("chat:message", async ({ room, message }) => {
     // Save message
@@ -64,8 +63,7 @@ io.on("connection", (socket) => {
     await db.write();
     // tell clients to update room and show message
     io.to(room.id).emit("chat:message", message);
-  })
-
+  });
 });
 
 // ROUTES
@@ -88,13 +86,11 @@ app.post("/api/login", async (req, res) => {
   return res.json({ user });
 });
 
-
 // GET Users
 app.get("/api/users", async (req, res) => {
   await db.read();
   return res.json({ users: db.data.users });
 });
-
 
 // Serve React static files & SPA fallback
 const __filename = fileURLToPath(import.meta.url);
